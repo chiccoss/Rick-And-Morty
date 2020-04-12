@@ -8,10 +8,9 @@ class CaractersResponse {
 
 
     lateinit var info: Infos
-    //get() = info
+
 
     lateinit var results: ArrayList<Character>
-    //get() = results
 
 
 }

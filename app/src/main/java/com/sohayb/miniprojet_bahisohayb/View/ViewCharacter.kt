@@ -17,21 +17,21 @@ class ViewCharacter : AppCompatActivity() {
 
         Picasso.get().load(intent.getStringExtra("image")).into(ViewChracterImage)
 
-        ViewCaracteName.text = intent.getStringExtra("name")
-        ViewCaracterStatus.text = intent.getStringExtra("status")
-        ViewCaracterSpecies.text = intent.getStringExtra("species")
+        BTN1.text = intent.getStringExtra("name")
+        BTN2.text = intent.getStringExtra("status")
+        BTN3.text = intent.getStringExtra("species")
 
         if (intent.getStringExtra("type") == "") {
-            ViewCaracterType.text = getString(R.string.not_defined)
+            BTN4.text = getString(R.string.not_defined)
         } else {
-            ViewCaracterType.text = intent.getStringExtra("type")
+            BTN4.text = intent.getStringExtra("type")
 
         }
 
-        ViewCaracterGender.text = intent.getStringExtra("gender")
-        ViewCaracterOrigin.text = intent.getStringExtra("originName")
-        ViewCaracterLocation.text = intent.getStringExtra("locationName")
-        ViewCaracterCreated.text = intent.getStringExtra("created")
+        BTN5.text = intent.getStringExtra("gender")
+        BTN6.text = intent.getStringExtra("originName")
+        BTN7.text = intent.getStringExtra("locationName")
+        BTN8.text = intent.getStringExtra("created")
     }
 }
 

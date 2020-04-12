@@ -1,197 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/universe"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
     app:cardCornerRadius="2dp"
-    app:cardElevation="20dp"
     app:cardPreventCornerOverlap="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <ImageView
-            android:id="@+id/ViewChracterImage"
-            android:layout_width="410dp"
-            android:layout_height="359dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/svalue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/ViewChracterImage"
             android:padding="0dp"
-            android:scaleType="fitXY"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY" />
 
 
         <LinearLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="110dp"
-            android:layout_height="425dp"
-            android:layout_marginTop="32dp"
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ViewChracterImage"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ViewChracterImage">
 
-            <Button
+            <TextView
                 android:id="@+id/ViewCharacterNameLabel"
-                android:layout_width="113dp"
-                android:layout_height="42dp"
-                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Name"
-                android:textSize="15sp" />
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/ViewCharacterStatusLabel"
-                android:layout_width="114dp"
+                android:id="@+id/BTN1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="16dp"
+
                 android:clickable="false"
-                android:text="Status">
-
-            </Button>
-
-            <Button
-                android:id="@+id/ViewCharacterSpeciesLabel"
-                android:layout_width="114dp"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:text="Species">
-
-            </Button>
-
-            <Button
-                android:id="@+id/ViewCharacterTypeLabel"
-                android:layout_width="114dp"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:text="Type">
-
-            </Button>
-
-
-            <Button
-                android:id="@+id/ViewCharacterGenderLabel"
-                android:layout_width="113dp"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:text="Gender">
-
-            </Button>
-
-            <Button
-                android:id="@+id/ViewCharacterOriginLabel"
-                android:layout_width="112dp"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:text="Origin">
-
-            </Button>
-
-            <Button
-                android:id="@+id/ViewCharacterLocationLabel"
-                android:layout_width="113dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:clickable="false"
-                android:text="Location">
-
-            </Button>
-
-            <Button
-                android:id="@+id/ViewCharacterCreatedLabel"
-                android:layout_width="113dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:clickable="false"
-                android:text="Created">
-
-            </Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="250dp"
-            android:layout_height="403dp"
-            android:layout_marginTop="32dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ViewChracterImage">
-
-            <Button
-                android:id="@+id/ViewCaracteName"
-                android:layout_width="231dp"
-                android:layout_height="45dp"
-                android:clickable="false"
-                android:text="NAMEE"
                 android:textSize="20sp"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="83dp" />
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterNameLabel" />
 
+            <TextView
+                android:id="@+id/ViewCharacterStatusLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN2"
+                app:layout_constraintTop_toBottomOf="@+id/BTN1" />
 
             <Button
-                android:id="@+id/ViewCaracterStatus"
-                android:layout_width="255dp"
+                android:id="@+id/BTN2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:textSize="20sp" />
 
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/ViewCharacterSpeciesLabel"
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterStatusLabel" />
+
+            <TextView
+                android:id="@+id/ViewCharacterSpeciesLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Specie"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN3"
+                app:layout_constraintTop_toBottomOf="@+id/BTN2" />
 
             <Button
-                android:id="@+id/ViewCaracterSpecies"
-                android:layout_width="233dp"
+                android:id="@+id/BTN3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                app:layout_constraintBottom_toTopOf="@+id/ViewCharacterTypeLabel"
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterSpeciesLabel" />
+
+            <TextView
+                android:id="@+id/ViewCharacterTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN4"
+                app:layout_constraintTop_toBottomOf="@+id/BTN3" />
+
+            <Button
+                android:id="@+id/BTN4"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:textSize="20sp" />
 
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/ViewCharacterGenderLabel"
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterTypeLabel" />
+
+            <TextView
+                android:id="@+id/ViewCharacterGenderLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN5"
+                app:layout_constraintTop_toBottomOf="@+id/BTN4" />
 
             <Button
-                android:id="@+id/ViewCaracterType"
-                android:layout_width="232dp"
+                android:id="@+id/BTN5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/ViewCharacterOriginLabel"
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterGenderLabel" />
 
+            <TextView
+                android:id="@+id/ViewCharacterOriginLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Origin"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN6"
+                app:layout_constraintTop_toBottomOf="@+id/BTN5" />
 
             <Button
-                android:id="@+id/ViewCaracterGender"
-                android:layout_width="232dp"
+                android:id="@+id/BTN6"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterOriginLabel" />
 
+            <TextView
+                android:id="@+id/ViewCharacterLocationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN6"
+                app:layout_constraintTop_toBottomOf="@+id/BTN5" />
 
             <Button
-                android:id="@+id/ViewCaracterOrigin"
-                android:layout_width="229dp"
+                android:id="@+id/BTN7"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterLocationLabel" />
 
+            <TextView
+                android:id="@+id/ViewCharacterCreatedLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Created"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN6"
+                app:layout_constraintTop_toBottomOf="@+id/BTN5" />
 
             <Button
-                android:id="@+id/ViewCaracterLocation"
-                android:layout_width="228dp"
-                android:layout_height="72dp"
+                android:id="@+id/BTN8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:clickable="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/ViewCharacterCreatedLabel" />
 
-
-            <Button
-                android:id="@+id/ViewCaracterCreated"
-                android:layout_width="224dp"
-                android:layout_height="46dp"
-                android:clickable="false"
-                android:textSize="20sp" />
 
         </LinearLayout>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </ScrollView>

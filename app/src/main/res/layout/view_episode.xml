@@ -1,65 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="20dp"
-    app:cardPreventCornerOverlap="false"
+    android:layout_height="match_parent"
+    tools:context=".View.ViewEpisode">
 
-    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#00bb2d">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/ViewChracterImage"
+        <TextView
+            android:id="@+id/EpiName"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="0dp"
-            android:adjustViewBounds="true"
-            android:padding="0dp"
-            android:scaleType="fitXY"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="Episode Name"
+            android:textAlignment="center"
+            android:textSize="30sp"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/svalue" />
+            tools:layout_editor_absoluteX="0dp" />
 
+        <Button
+            android:id="@+id/BTN1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
 
-        <LinearLayout
-            android:id="@+id/container1"
-            android:layout_width="397dp"
-            android:layout_height="76dp"
-            android:orientation="vertical"
-            android:padding="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ViewChracterImage">
+            android:clickable="false"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/EpiName"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/EairDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Air date"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN2"
+            app:layout_constraintTop_toBottomOf="@+id/BTN1"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/BTN2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Caracterss"
+            app:layout_constraintTop_toBottomOf="@+id/EairDate"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/Caracterss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Characters in the Ep "
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN3"
+            app:layout_constraintTop_toBottomOf="@+id/BTN2"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/BTN3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="click to see the characters"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/EpiCreated"
+            app:layout_constraintTop_toBottomOf="@+id/Caracterss"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/EpiCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Created on"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN4"
+            app:layout_constraintTop_toBottomOf="@+id/BTN3"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/BTN4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Episoded"
+            app:layout_constraintTop_toBottomOf="@+id/EpiCreated"
+            tools:layout_editor_absoluteX="0dp" />
 
             <TextView
-                android:id="@+id/ViewCaracteName"
+                android:id="@+id/Episoded"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Title of a Blog"
-                android:textColor="#000"
-                android:textSize="19sp" />
+                android:text="Episode"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN5"
+                app:layout_constraintTop_toBottomOf="@+id/BTN4"
+                tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/BTN5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Epiurl"
+            app:layout_constraintTop_toBottomOf="@+id/Episoded"
+            tools:layout_editor_absoluteX="16dp" />
 
             <TextView
-                android:id="@+id/ViewCaracterAge"
+                android:id="@+id/Epiurl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Title of a Blog"
-                android:textColor="#000"
-                android:textSize="19sp" />
+                android:text="Episode URL"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/BTN6"
+                app:layout_constraintTop_toBottomOf="@+id/BTN5"
+                tools:layout_editor_absoluteX="16dp" />
 
-
-        </LinearLayout>
-
-
+        <Button
+            android:id="@+id/BTN6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/Epiurl"
+            tools:layout_editor_absoluteX="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.cardview.widget.CardView>
+</ScrollView>

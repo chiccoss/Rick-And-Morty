@@ -4,7 +4,6 @@ import com.sohayb.miniprojet_bahisohayb.DataModels.Character
 import com.sohayb.miniprojet_bahisohayb.DataModels.Episode
 import com.sohayb.miniprojet_bahisohayb.DataModels.Location
 import com.sohayb.miniprojet_bahisohayb.ResponseModels.CaractersResponse
-import com.sohayb.miniprojet_bahisohayb.ResponseModels.CharacterResponse
 import com.sohayb.miniprojet_bahisohayb.ResponseModels.EpisodeResponse
 import com.sohayb.miniprojet_bahisohayb.ResponseModels.LocationResponse
 import kotlinx.coroutines.Deferred
@@ -41,16 +40,4 @@ interface ApiInterface {
     @GET("episode/{id}")
     fun getEpisodeById(@Path("id") id: Int): Call<Episode>
 
-    /*
-     @GET("episode")
-     fun getAllEpisodes(): Call<CaractersResponse>
-
-     @GET("location")
-     fun getAllLocations(): Call<CaractersResponse>
-     @GET("/character")
-     fun getAllEpisodes(): Deferred<EpisodeResponse>
-
-     @GET("/character/{id}")
-     fun getCaracterById(): Call<Character?>
-     @GET("users/{id}")*/
 }

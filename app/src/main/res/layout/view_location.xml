@@ -1,67 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="2dp"
-    app:cardElevation="20dp"
-    app:cardPreventCornerOverlap="false"
+    android:layout_height="match_parent"
+    tools:context=".View.ViewEpisode">
 
-    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#00bb2d">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/ViewChracterImage"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="0dp"
-            android:adjustViewBounds="true"
-            android:padding="0dp"
-            android:scaleType="fitXY"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/svalue" />
-
-
-        <LinearLayout
-            android:id="@+id/container1"
+        <TextView
+            android:id="@+id/LocaName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ViewChracterImage">
+            android:text="Location Name"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
 
-            <TextView
-                android:id="@+id/ViewCaracteName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="The Title of a Blog"
-                android:textColor="#000"
-                android:textSize="19sp" />
+        <Button
+            android:id="@+id/BTN1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
 
-            <TextView
-                android:id="@+id/ViewCaracterAge"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="The Title of a Blog"
-                android:textColor="#000"
-                android:textSize="19sp" />
+            android:clickable="false"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/LocaName"
+            tools:layout_editor_absoluteX="0dp" />
 
+        <TextView
+            android:id="@+id/Created"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Created"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN2"
+            app:layout_constraintTop_toBottomOf="@+id/BTN1"
+            tools:layout_editor_absoluteX="0dp" />
 
+        <Button
+            android:id="@+id/BTN2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
 
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Dimension"
+            app:layout_constraintTop_toBottomOf="@+id/Created"
+            tools:layout_editor_absoluteX="0dp" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/Dimension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dimension"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN3"
+            app:layout_constraintTop_toBottomOf="@+id/BTN2"
+            tools:layout_editor_absoluteX="0dp" />
 
+        <Button
+            android:id="@+id/BTN3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Residents"
+            app:layout_constraintTop_toBottomOf="@+id/Dimension"
+            tools:layout_editor_absoluteX="0dp" />
 
+        <TextView
+            android:id="@+id/Residents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Residents"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN4"
+            app:layout_constraintTop_toBottomOf="@+id/BTN3"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/BTN4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="click to get the list of residents"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Type"
+            app:layout_constraintTop_toBottomOf="@+id/Residents"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/Type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN5"
+            app:layout_constraintTop_toBottomOf="@+id/BTN4"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/BTN5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/LocationURL"
+            app:layout_constraintTop_toBottomOf="@+id/Type"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/LocationURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location URL"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/BTN6"
+            app:layout_constraintTop_toBottomOf="@+id/BTN5"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/BTN6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/LocationURL"
+            tools:layout_editor_absoluteX="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.cardview.widget.CardView>
+</ScrollView>
